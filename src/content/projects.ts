@@ -1,7 +1,6 @@
 import type { Locale } from "@/lib/i18n";
 
 export type ProjectLink = { label: string; href: string; external?: boolean };
-
 export type Project = {
   slug: string;
   title: string;
@@ -25,81 +24,43 @@ export const projects: Project[] = [
   {
     slug: "madar",
     title: "مَدار | ORBIT",
-    eyebrow: "Arabic business operating layer",
+    eyebrow: "Arabic-first business operating layer",
     theme: "madar",
     status: "Live product",
     role: "Founder & builder",
     period: "2026 — ongoing",
-    stack: ["Next.js", "React", "TypeScript", "Supabase", "AI SDK", "PostgreSQL"],
+    stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "AI"],
     shortDescription: {
-      ar: "منظومة عربية تجمع تشغيل التجارة والبيانات والقدرات الذكية في تجربة واحدة.",
-      en: "An Arabic-first operating layer connecting commerce, data, and practical intelligence.",
+      ar: "منصة عربية ذكية لإدارة التجارة ورقمنة العمليات وإضافة طبقة ذكاء قابلة للتوسع إلى الأعمال.",
+      en: "An Arabic-first platform for commerce operations, business digitisation, and a scalable intelligence layer.",
     },
     overview: {
-      ar: "مَدار مشروع طويل المدى لبناء طبقة تشغيل عربية للأعمال. بدل أن تكون مجموعة شاشات منفصلة، تجمع المنصة المبيعات والمخزون والعملاء والمصروفات والمهام والتقارير داخل مساحات عمل واضحة، ثم تضع الذكاء الاصطناعي في سياق البيانات والصلاحيات الفعلية.",
-      en: "MADAR is a long-term attempt to build an Arabic operating layer for businesses. Rather than a collection of disconnected screens, it brings sales, inventory, customers, expenses, tasks, and reporting into clear workspaces, then places AI inside the context of real data and permissions.",
+      ar: "مَدار ليس شاشة واحدة ولا متجرًا فقط. المستودع الفعلي يضم حساب العميل، الخدمات، مساحات العمل، المتجر، الإدارة، MADAR Retail وORBY. الفكرة هي جمع العمل والبيانات والقدرات الذكية داخل طبقة تشغيل عربية واحدة بدل توزيع القرار بين أدوات منفصلة.",
+      en: "MADAR is not a single screen or just a storefront. The live repository contains customer account surfaces, services, workspaces, store, administration, MADAR Retail, and ORBY. The product direction is one Arabic-first operating layer connecting work, data, and practical intelligence.",
     },
     problem: {
-      ar: "تعمل كثير من الأعمال على أدوات متفرقة، وقراراتها موزعة بين الذاكرة والرسائل والملفات. المشكلة ليست غياب المزايا بقدر ما هي غياب صورة تشغيلية واحدة يمكن فهمها والتصرف بناءً عليها.",
-      en: "Many businesses work across scattered tools, with decisions split between memory, messages, and files. The problem is not simply a lack of features; it is the lack of one operational picture that can be understood and acted on.",
+      ar: "تتوزع عمليات كثير من الأعمال بين الرسائل والملفات والأدوات المنفصلة. عندها تصبح البيانات موجودة لكن الصورة التشغيلية غير واضحة، ويضيع القرار بين أكثر من مكان.",
+      en: "Business operations often fragment across messages, files, and disconnected tools. Data exists, but the operational picture does not—and decisions get lost between systems.",
     },
     built: {
-      ar: [
-        "منصة عربية RTL بمساحات عمل معزولة لكل عميل.",
-        "طبقات للحساب والخدمات والمتجر ومساحات التشغيل.",
-        "MADAR Retail لإدارة المنتجات والمبيعات والمخزون والعملاء والمصروفات والديون والتقارير.",
-        "ORBY كمساعد واحد يفهم سياق المساحة بدل تقديم إجابات عامة منفصلة عن العمل.",
-        "نظام تصميم وتجربة موحّد يحافظ على الوضوح مع نمو المنصة.",
-      ],
-      en: [
-        "An Arabic RTL platform with isolated workspaces for each customer.",
-        "Account, services, store, and workspace layers that share one product language.",
-        "MADAR Retail for products, sales, inventory, customers, expenses, debts, and reports.",
-        "ORBY as one context-aware assistant rather than a set of disconnected bots.",
-        "A shared design and experience system that keeps the product understandable as it grows.",
-      ],
+      ar: ["منصة عربية RTL تفصل بوضوح بين حساب العميل وإدارة المنصة.", "مساحات عمل وخدمات مع عزل بيانات وصلاحيات على مستوى العميل.", "MADAR Retail للمبيعات والمخزون والعملاء والمصروفات والديون والتقارير.", "ORBY كمساعد ذكي داخل سياق الحساب والخدمة بدل مساعد عام منفصل عن العمل.", "طبقات تشغيل وموبايل وواجهات إدارة تتوسع ضمن نفس المنتج."],
+      en: ["An Arabic RTL platform with a clear boundary between customer account and platform administration.", "Workspaces and services with customer-level data and permission isolation.", "MADAR Retail for sales, inventory, customers, expenses, debts, and reporting.", "ORBY as an assistant inside account and service context rather than a generic chatbot.", "Operational, mobile, and administrative surfaces that grow within the same product system."],
     },
     decisions: {
-      ar: [
-        { title: "السياق قبل الذكاء", text: "صُمم ORBY ليفهم المساحة والبيانات والصلاحيات، ويقترح خطوة قابلة للمراجعة بدل عرض ذكاء عام لا يعرف طبيعة العمل." },
-        { title: "العربية من البداية", text: "اللغة واتجاه الواجهة والمصطلحات جزء من تصميم المنتج، وليست طبقة ترجمة تضاف في النهاية." },
-        { title: "طبقات واضحة", text: "فصل المتجر عن مساحات التشغيل والإدارة يحافظ على حدود مفهومة بين ما يراه العميل وما يخص المنصة." },
-      ],
-      en: [
-        { title: "Context before intelligence", text: "ORBY is shaped around workspace data and permissions, so a suggestion can be reviewed and acted on instead of being generic." },
-        { title: "Arabic from the start", text: "Language, direction, and terminology are product decisions—not a translation layer added at the end." },
-        { title: "Clear layers", text: "Separating the store, customer workspaces, and platform administration keeps boundaries understandable." },
-      ],
+      ar: [{ title: "السياق قبل الذكاء", text: "ORBY مرتبط بسياق الحساب والخدمة والصلاحيات؛ الهدف أن تكون الإجابة قابلة للاستخدام داخل العمل." }, { title: "العربية من البداية", text: "RTL والمصطلحات وتدفق الواجهة قرارات منتج أساسية وليست ترجمة لاحقة." }, { title: "حدود تشغيل واضحة", text: "فصل الحساب ومساحات العمل والإدارة يمنع تحول المنصة مع النمو إلى شاشة ضخمة غير مفهومة." }],
+      en: [{ title: "Context before intelligence", text: "ORBY is shaped around account, service, and permission context so intelligence remains useful inside real work." }, { title: "Arabic from the start", text: "RTL, terminology, and interface flow are core product decisions—not a translation pass." }, { title: "Clear operating boundaries", text: "Separating account, workspaces, and administration keeps the product understandable as it grows." }],
     },
     experience: {
-      ar: [
-        { title: "منظومة واحدة", text: "تنتقل من إدارة التجارة إلى الرقمنة والمنتجات المتخصصة ضمن مسار واحد." },
-        { title: "ORBY", text: "محادثة واحدة للحساب، مع سياق خدمة وصلاحيات وضوابط واضحة." },
-        { title: "Retail", text: "مساحة تشغيل أقرب إلى يوم التاجر الحقيقي: بيع، مخزون، عملاء، نقد، ديون وتقارير." },
-      ],
-      en: [
-        { title: "One operating layer", text: "Commerce management, practical digitisation, and specialised products live in one product direction." },
-        { title: "ORBY", text: "One account-level conversation with service context, permissions, and explicit controls." },
-        { title: "Retail", text: "A workspace shaped around a merchant's day: sales, inventory, customers, cash, debts, and reports." },
-      ],
+      ar: [{ title: "Retail", text: "تشغيل يومي للتجارة." }, { title: "ORBY", text: "طبقة ذكاء مرتبطة بالسياق." }, { title: "Workspaces", text: "مساحات واضحة للخدمات والعمل." }],
+      en: [{ title: "Retail", text: "Daily commerce operations." }, { title: "ORBY", text: "Context-aware intelligence." }, { title: "Workspaces", text: "Clear service and work surfaces." }],
     },
     currentStatus: {
-      ar: "مَدار منشور ويستمر تطويره على مراحل. المنتج الأساسي، تجربة ORBY، ومساحات Retail موجودة في المستودع والنسخة العامة، مع استمرار العمل على توسيع العمق التشغيلي.",
-      en: "MADAR is shipped and still evolving in stages. The core product, ORBY experience, and Retail workspaces exist in the repository and public product, while deeper operational layers continue to grow.",
+      ar: "مَدار منشور على orbitmadar.com ويستمر تطويره. المستودع الحالي يضم المنتج العام، MADAR Retail، ORBY، مساحات الحساب والعمل، طبقات الإدارة وواجهات API متعددة.",
+      en: "MADAR is live at orbitmadar.com and continues to evolve. The current repository includes the public product, MADAR Retail, ORBY, account/workspace surfaces, administration, and multiple API layers.",
     },
     links: {
-      ar: [
-        { label: "زيارة مَدار", href: "https://www.orbitmadar.com/", external: true },
-        { label: "استكشف ORBY", href: "https://www.orbitmadar.com/orby", external: true },
-        { label: "عن مَدار", href: "https://www.orbitmadar.com/about", external: true },
-        { label: "المستودع العام", href: "https://github.com/madarorbit/madar-platform", external: true },
-      ],
-      en: [
-        { label: "Visit MADAR", href: "https://www.orbitmadar.com/", external: true },
-        { label: "Explore ORBY", href: "https://www.orbitmadar.com/orby", external: true },
-        { label: "About MADAR", href: "https://www.orbitmadar.com/about", external: true },
-        { label: "Public repository", href: "https://github.com/madarorbit/madar-platform", external: true },
-      ],
+      ar: [{ label: "زيارة مَدار", href: "https://www.orbitmadar.com/", external: true }, { label: "استكشف ORBY", href: "https://www.orbitmadar.com/orby", external: true }, { label: "عن مَدار", href: "https://www.orbitmadar.com/about", external: true }, { label: "المستودع العام", href: "https://github.com/madarorbit/madar-platform", external: true }],
+      en: [{ label: "Visit MADAR", href: "https://www.orbitmadar.com/", external: true }, { label: "Explore ORBY", href: "https://www.orbitmadar.com/orby", external: true }, { label: "About MADAR", href: "https://www.orbitmadar.com/about", external: true }, { label: "Public repository", href: "https://github.com/madarorbit/madar-platform", external: true }],
     },
   },
   {
@@ -107,79 +68,43 @@ export const projects: Project[] = [
     title: "عَهد",
     eyebrow: "Warranty & after-sales SaaS",
     theme: "ahd",
-    status: "In active development",
+    status: "Public demo live · operations evolving",
     role: "Founder & builder",
     period: "2026 — ongoing",
     stack: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Vercel"],
     shortDescription: {
-      ar: "منصة عربية تساعد المنشآت على تنظيم الضمان وخدمات ما بعد البيع في مكان واحد.",
-      en: "An Arabic SaaS product for organising warranties and after-sales work in one place.",
+      ar: "منصة عربية لتنظيم الضمان الإلكتروني والتحقق وخدمات ما بعد البيع من مكان واحد.",
+      en: "An Arabic SaaS product for electronic warranties, verification, and after-sales operations.",
     },
     overview: {
-      ar: "عَهد يحوّل الضمان من ورقة أو محادثة يصعب الرجوع إليها إلى سجل تشغيلي يمكن للمنشأة إدارته والعميل فهمه. يبدأ المنتج من لحظة البيع: تسجيل العميل والمنتج والرقم التسلسلي، ثم إصدار بطاقة ضمان وهوية واضحة، ثم متابعة ما بعد البيع ضمن تدفق مفهوم.",
-      en: "AHD turns a warranty from a paper card or a hard-to-find conversation into an operational record a business can manage and a customer can understand. The product starts at the point of sale—capturing the customer, product, and serial number—then carries the warranty and after-sales flow forward.",
+      ar: "عَهد يحوّل الضمان من كرت أو محادثة يصعب الرجوع إليها إلى سجل تشغيلي. النسخة الحالية تتضمن واجهة عامة عربية، مصادقة وصلاحيات، إدارة منصة ومنشآت متعددة، ومساحات للعملاء والمنتجات والضمانات والمطالبات، إضافة إلى Explore: ديمو بيعي تفاعلي دون تسجيل.",
+      en: "AHD turns warranty from a paper card or hard-to-find conversation into an operational record. The current product includes an Arabic public experience, authentication and roles, platform and tenant administration, customer/product/warranty/claim surfaces, plus Explore: an interactive sales demo with no sign-up.",
     },
     problem: {
-      ar: "تتوزع معلومات الضمان بين كروت ورقية وفواتير وواتساب وذاكرة الموظف. وعندما يعود العميل بعد أشهر، يصبح العثور على الحالة وإثباتها ومتابعتها عبئًا على المنشأة.",
-      en: "Warranty information is often split across paper cards, invoices, WhatsApp, and employee memory. When a customer returns months later, finding, proving, and following up on the case becomes expensive friction for the business.",
+      ar: "تتوزع معلومات الضمان بين الورق والفاتورة وواتساب وذاكرة الموظف. عندما يعود العميل بعد أشهر، يصبح التحقق من المنتج والضمان وطلب الخدمة عملية بطيئة وغير موحدة.",
+      en: "Warranty information is often split across paper, invoices, WhatsApp, and employee memory. Months later, verification and service become slow and inconsistent.",
     },
     built: {
-      ar: [
-        "بنية SaaS متعددة المنشآت مع عزل بيانات كل منشأة.",
-        "تسجيل دخول وصلاحيات تفصل إدارة المنصة عن مساحة المنشأة.",
-        "مساحات تشغيل لإدارة العملاء والمنتجات والضمانات والمطالبات والإعدادات.",
-        "تجربة Explore تفاعلية تشرح إصدار الضمان وبطاقة العميل والتحقق وطلب الخدمة دون تسجيل.",
-        "تخصيص هوية المنشأة في تجربة الضمان مع واجهات متجاوبة للهاتف والحاسوب.",
-      ],
-      en: [
-        "A multi-tenant SaaS foundation with tenant-level data isolation.",
-        "Authentication and roles that separate platform administration from the business workspace.",
-        "Operational surfaces for customers, products, warranties, claims, and settings.",
-        "An interactive Explore experience that demonstrates issuing a warranty, the customer card, verification, and service requests without sign-up.",
-        "Tenant branding and responsive workflows for phone, tablet, and desktop use.",
-      ],
+      ar: ["بنية SaaS متعددة المنشآت.", "مصادقة وفصل بين مالك المنصة ومساحة المنشأة.", "إدارة العملاء والمنتجات والضمانات والمطالبات والإعدادات.", "تحقق بالرمز والرقم التسلسلي ضمن تجربة العميل.", "Explore تفاعلي يشرح إصدار الضمان وبطاقة العميل والتحقق وطلب الخدمة وتخصيص هوية المنشأة دون تسجيل."],
+      en: ["A multi-tenant SaaS foundation.", "Authentication and separation between platform owner and tenant workspace.", "Customer, product, warranty, claim, and settings surfaces.", "Token and serial-number verification in the customer experience.", "An interactive Explore flow demonstrating issuance, customer card, verification, service requests, and tenant branding without sign-up."],
     },
     decisions: {
-      ar: [
-        { title: "الثقة تبدأ من السجل", text: "اختيار سجل واضح للعميل والمنتج والرقم التسلسلي يجعل خدمة ما بعد البيع امتدادًا لعملية البيع، لا بحثًا منفصلًا كل مرة." },
-        { title: "عزل المنشآت", text: "صُممت البيانات والصلاحيات حول tenant_id وسياسات وصول على مستوى قاعدة البيانات حتى لا تختلط عمليات منشأة بأخرى." },
-        { title: "الديمو جزء من المنتج", text: "تجربة Explore ليست صورة تسويقية؛ إنها مسار تفاعلي يشرح القيمة قبل طلب تسجيل أو بيانات." },
-      ],
-      en: [
-        { title: "Trust starts with the record", text: "Making the customer, product, and serial number explicit turns after-sales work into a continuation of the sale, not a search exercise." },
-        { title: "Tenant isolation", text: "Data and permissions are shaped around tenant boundaries and database-level access policies so businesses do not bleed into one another." },
-        { title: "The demo is part of the product", text: "Explore is not a marketing screenshot; it is an interactive path that explains the value before asking for an account." },
-      ],
+      ar: [{ title: "الثقة تبدأ من السجل", text: "العميل والمنتج والرقم التسلسلي والضمان يعيشون في سياق واحد يمكن الرجوع إليه." }, { title: "عزل المنشآت", text: "الهوية والصلاحيات والبيانات مبنية حول حدود كل منشأة." }, { title: "الديمو جزء من البيع", text: "Explore يسمح بفهم المنتج وتجربته قبل طلب حساب أو بيانات." }],
+      en: [{ title: "Trust starts with the record", text: "Customer, product, serial number, and warranty live in one retrievable context." }, { title: "Tenant isolation", text: "Identity, permissions, and data are shaped around each business boundary." }, { title: "The demo is part of sales", text: "Explore lets prospects understand and try the product before giving account details." }],
     },
     experience: {
-      ar: [
-        { title: "من البيع إلى الضمان", text: "تبدأ الرحلة من إدخال بيانات العميل والمنتج، ثم إصدار ضمان يحمل هوية المنشأة." },
-        { title: "وضوح للعميل", text: "تجربة التحقق تعرض حالة الضمان بطريقة مفهومة دون الحاجة إلى تطبيق مستقل." },
-        { title: "تشغيل ما بعد البيع", text: "تجمع مساحة المنشأة سجلات الضمان والعملاء والمنتجات وطلبات الخدمة في سياق واحد." },
-      ],
-      en: [
-        { title: "From sale to warranty", text: "The flow begins with the customer and product record, then issues a warranty carrying the business identity." },
-        { title: "Clarity for customers", text: "The verification path is designed to explain warranty status without requiring a separate app." },
-        { title: "After-sales operations", text: "The business workspace brings warranty, customer, product, and service records into one context." },
-      ],
+      ar: [{ title: "إصدار الضمان", text: "من العميل والمنتج إلى سجل واضح." }, { title: "التحقق", text: "بالرمز والرقم التسلسلي." }, { title: "ما بعد البيع", text: "طلبات الخدمة والمطالبات في نفس السياق." }],
+      en: [{ title: "Warranty issuance", text: "From customer and product to a clear record." }, { title: "Verification", text: "By token and serial number." }, { title: "After-sales", text: "Service requests and claims in the same context." }],
     },
     currentStatus: {
-      ar: "عَهد مبني ومتاح عبر نسخة عامة وديمو تفاعلي. تستمر المراحل التشغيلية في التطور، لذلك يركّز هذا العرض على البنية والتجربة المنفذة فعلًا دون ادعاء أرقام عملاء أو نتائج تجارية غير موثقة.",
-      en: "AHD is built and available through a public product and interactive demo. Operational phases are still evolving, so this case study stays close to what is implemented and makes no unsupported claims about customers or commercial results.",
+      ar: "الواجهة العامة والديمو التفاعلي منشوران. بنية المصادقة وإدارة المنصة والمنشآت منفذة في المستودع، بينما يستمر التحقق التشغيلي والتطوير للطبقات الداخلية. لا يعرض هذا البورتفوليو أرقام عملاء أو نتائج تجارية غير موثقة.",
+      en: "The public experience and interactive demo are live. Authentication, platform administration, and tenant foundations are implemented in the repository while operational validation and internal layers continue to evolve. No unsupported customer or commercial metrics are claimed here.",
     },
     links: {
-      ar: [
-        { label: "زيارة عَهد", href: "https://warranty-platform-mu.vercel.app/", external: true },
-        { label: "استكشف التجربة التفاعلية", href: "https://warranty-platform-mu.vercel.app/explore", external: true },
-      ],
-      en: [
-        { label: "Visit AHD", href: "https://warranty-platform-mu.vercel.app/", external: true },
-        { label: "Try the interactive demo", href: "https://warranty-platform-mu.vercel.app/explore", external: true },
-      ],
+      ar: [{ label: "زيارة عَهد", href: "https://warranty-platform-mu.vercel.app/", external: true }, { label: "جرّب Explore", href: "https://warranty-platform-mu.vercel.app/explore", external: true }],
+      en: [{ label: "Visit AHD", href: "https://warranty-platform-mu.vercel.app/", external: true }, { label: "Try Explore", href: "https://warranty-platform-mu.vercel.app/explore", external: true }],
     },
   },
 ];
 
-export function getProject(slug: string) {
-  return projects.find((project) => project.slug === slug);
-}
+export function getProject(slug: string) { return projects.find((project) => project.slug === slug); }
