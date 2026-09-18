@@ -14,7 +14,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--obsidian); }
 body { margin: 0; background: var(--ivory); color: var(--obsidian); font-family: "Geist", "IBM Plex Sans Arabic", Arial, sans-serif; }
-body[dir="rtl"] { font-family: "IBM Plex Sans Arabic", "Geist", Arial, sans-serif; }
+.page-shell[dir="rtl"] { font-family: "IBM Plex Sans Arabic", "Geist", Arial, sans-serif; }
 a { color: inherit; text-decoration: none; }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:focus-visible, a:focus-visible { outline: 2px solid var(--cobalt); outline-offset: 4px; }
