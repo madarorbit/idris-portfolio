@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="92" y1="66" x2="424" y2="444" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#31C982"/>
+      <stop offset=".48" stop-color="#168E5E"/>
+      <stop offset="1" stop-color="#07563B"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="171" y1="246" x2="342" y2="376" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FFFB"/>
+      <stop offset="1" stop-color="#C8F4DD"/>
+    </linearGradient>
+    <filter id="shadow" x="40" y="35" width="432" height="447" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#053C2A" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <g filter="url(#shadow)">
+    <path d="M256 48 418 142v188L256 424 94 330V142L256 48Z" fill="url(#bg)"/>
+    <path d="M256 82 389 159v154L256 390 123 313V159L256 82Z" stroke="#D9F8E7" stroke-opacity=".25" stroke-width="6"/>
+  </g>
+  <g>
+    <circle cx="256" cy="178" r="49" fill="#F8FFFB"/>
+    <circle cx="256" cy="178" r="27" fill="#9DEAC0"/>
+    <path d="M256 105v-24M256 275v-24M329 178h24M159 178h24M308 126l18-18M186 248l18-18M308 230l18 18M186 108l18 18" stroke="#E8FFF2" stroke-width="13" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(158 238)">
+    <path d="M14 35c0-13 10-23 23-23h122c13 0 23 10 23 23v80c0 13-10 23-23 23H37c-13 0-23-10-23-23V35Z" fill="url(#panel)" stroke="#F4FFF8" stroke-width="5"/>
+    <path d="M27 55h142M27 87h142M60 22v106M99 22v106M138 22v106" stroke="#0F7950" stroke-width="8" stroke-linecap="round" opacity=".78"/>
+  </g>
+  <path d="M331 341c29-17 56-20 80-10-10 25-29 42-58 51-18 5-35 4-51-2 7-17 17-30 29-39Z" fill="#F0FFF6"/>
+  <path d="M308 385c22-25 47-41 76-50" stroke="#0A6342" stroke-width="9" stroke-linecap="round"/>
+  <path d="M160 343c18 24 41 39 70 45" stroke="#CFF5DF" stroke-width="8" stroke-linecap="round" opacity=".75"/>
+</svg>
