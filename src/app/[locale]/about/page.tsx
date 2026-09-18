@@ -16,7 +16,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   return <div className="about-page">
     <header className="about-intro"><span className="section-index">01 / {ar ? "عن إدريس" : "About"}</span><div><h1>{ar ? "أبني لأفهم، وأتعلم بما أبنيه." : "I build to understand, and learn through what I build."}</h1><p>{ar ? "أعمل على منتجات تقنية من الفكرة إلى الواجهة والبنية والنشر، وأتعامل مع البرمجيات كوسيلة لحل احتكاك حقيقي، لا كعرض تقنيات." : "I work on technology products from idea to interface, architecture, and deployment. Software is a way to remove real friction—not a technology showcase."}</p></div></header>
     <div className="about-story">
-      <div className="about-story__portrait"><Image src="/portraits/idris-about.png" alt={ar ? "إدريس عارف" : "Idris Arif"} width={1254} height={1254} priority /></div>
+      <div className="about-story__portrait"><Image src="/portraits/idris-about-2026.webp" alt={ar ? "إدريس عارف" : "Idris Arif"} width={1254} height={1254} priority /></div>
       <div className="about-story__copy">
         <span className="gold-rule" />
         <h2>Founder mindset. Builder discipline.</h2>
