@@ -13,7 +13,6 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   const text = copy[locale];
   const pathWithoutLocale = pathname.replace(/^\/(ar|en)/, "") || "/";
   const nextPath = localizedPath(oppositeLocale(locale), pathWithoutLocale);
-
   const links = [
     { href: localizedPath(locale, "/work"), label: text.work },
     { href: localizedPath(locale, "/about"), label: text.about },
@@ -24,15 +23,13 @@ export function SiteHeader({ locale }: { locale: Locale }) {
     <header className="site-header">
       <div className="site-header__inner">
         <Link href={localizedPath(locale)} className="wordmark" aria-label={locale === "ar" ? "الصفحة الرئيسية" : "Home"} onClick={() => setOpen(false)}>
-          <span className="wordmark__mark">IA</span>
           <span className="wordmark__text">Idris Arif</span>
+          <span className="wordmark__dot" aria-hidden="true" />
         </Link>
-
         <nav className="desktop-nav" aria-label={locale === "ar" ? "التنقل الرئيسي" : "Main navigation"}>
-          {links.map((link) => <Link key={link.href} href={link.href}>{link.label}</Link>)}
+          {links.map((link) => <Link key={link.href} className={pathname === link.href ? "is-active" : ""} href={link.href}>{link.label}</Link>)}
           <Link href={nextPath} className="locale-switch" hrefLang={oppositeLocale(locale)}>{text.language}</Link>
         </nav>
-
         <button className="menu-button" type="button" aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen((value) => !value)}>
           <span className="sr-only">{open ? (locale === "ar" ? "إغلاق القائمة" : "Close menu") : (locale === "ar" ? "فتح القائمة" : "Open menu")}</span>
           {open ? <CloseIcon /> : <MenuIcon />}
