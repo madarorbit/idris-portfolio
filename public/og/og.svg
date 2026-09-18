@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0B0D10"/>
+  <path d="M0 514h1200" stroke="#F3F0E8" stroke-opacity=".22"/>
+  <circle cx="1010" cy="126" r="176" stroke="#536DFE" stroke-opacity=".65"/>
+  <circle cx="1010" cy="126" r="114" stroke="#F3F0E8" stroke-opacity=".18"/>
+  <text x="72" y="118" fill="#9299A3" font-family="Arial, sans-serif" font-size="24" letter-spacing="5">IDRIS ARIF / 2026</text>
+  <text x="72" y="300" fill="#F3F0E8" font-family="Arial, sans-serif" font-size="92" font-weight="700">Builder · Founder</text>
+  <text x="72" y="396" fill="#536DFE" font-family="Arial, sans-serif" font-size="72" font-weight="700">Software &amp; AI</text>
+  <text x="72" y="570" fill="#9299A3" font-family="Arial, sans-serif" font-size="24">I build software products for real-world problems.</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="96" viewBox="0 0 420 96" role="img" aria-labelledby="title desc">
+  <title id="title">مَدار | ORBIT</title>
+  <desc id="desc">الشعار الرسمي لمنصة مَدار | ORBIT</desc>
+  <defs>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#3DE6CE"/><stop offset="1" stop-color="#00B89A"/></linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A98CFF"/><stop offset="1" stop-color="#6D28FF"/></linearGradient>
+    <linearGradient id="wordmark" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#CBD5E1"/><stop offset=".5" stop-color="#94A3B8"/><stop offset="1" stop-color="#CBD5E1"/></linearGradient>
+  </defs>
+  <g transform="translate(48 48)" fill="none" stroke-width="13" stroke-linecap="round"><path d="M-11-27A28 28 0 0 0-11 27" stroke="url(#mint)"/><path d="M11-27A28 28 0 0 1 11 27" stroke="url(#violet)"/></g>
+  <text x="94" y="59" fill="url(#wordmark)" font-family="Arial, Tahoma, sans-serif" font-size="34" font-weight="800">مَدار</text>
+  <text x="184" y="58" fill="#64748B" font-family="Arial, Tahoma, sans-serif" font-size="27" font-weight="600">|</text>
+  <text x="207" y="59" fill="url(#wordmark)" font-family="Arial, Tahoma, sans-serif" font-size="31" font-weight="800" letter-spacing="1.5">ORBIT</text>
+</svg>
