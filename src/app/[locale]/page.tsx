@@ -26,7 +26,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       </div>
       <div className="hero__portrait-wrap">
         <span className="hero__portrait-line" />
-        <Image className="portrait" src="/portraits/idris-hero.png" alt={ar ? "إدريس عارف" : "Idris Arif"} width={1254} height={1254} priority sizes="(max-width: 850px) 92vw, 44vw" />
+        <Image className="portrait" src="/portraits/idris-hero-2026.webp" alt={ar ? "إدريس عارف" : "Idris Arif"} width={1254} height={1254} priority sizes="(max-width: 850px) 92vw, 44vw" />
         <div className="hero__caption"><span>Builder · Founder</span><span>Software & AI</span></div>
       </div>
       <a className="hero__scroll" href="#work"><ArrowDown /><span>{ar ? "الأعمال" : "Work"}</span></a>
@@ -46,7 +46,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     </section>
 
     <section className="about-tease">
-      <div className="about-tease__image"><Image src="/portraits/idris-about.png" alt={ar ? "إدريس عارف" : "Idris Arif"} width={1254} height={1254} sizes="(max-width: 850px) 92vw, 45vw" /></div>
+      <div className="about-tease__image"><Image src="/portraits/idris-about-2026.webp" alt={ar ? "إدريس عارف" : "Idris Arif"} width={1254} height={1254} sizes="(max-width: 850px) 92vw, 45vw" /></div>
       <div className="about-tease__copy"><span className="section-index">04 / {text.about}</span><h2>{ar ? "التعلّم عندي يمر عبر البناء." : "For me, learning runs through building."}</h2><p>{text.aboutShort}</p><Link className="text-link text-link--large" href={localizedPath(locale, "/about")}>{text.about}<ArrowUpRight /></Link></div>
     </section>
 
