@@ -6,13 +6,33 @@ import { isLocale, type Locale } from "@/lib/i18n";
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale: value } = await params;
   const locale = isLocale(value) ? value : "ar";
-  return { title: copy[locale].about, description: copy[locale].aboutShort };
+  return { title: copy[locale].about, description: copy[locale].aboutShort, alternates: { canonical: `/${locale}/about`, languages: { ar: "/ar/about", en: "/en/about" } } };
 }
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: value } = await params;
   const locale: Locale = isLocale(value) ? value : "ar";
-  const text = copy[locale];
   const ar = locale === "ar";
-  return <div className="about-page"><div className="about-intro"><span className="eyebrow">01 / {text.about}</span><div><h1>{ar ? "أبني ما أريد أن أراه موجودًا." : "I build what I want to see exist."}</h1><p>{text.aboutShort}</p></div></div><div className="about-body"><div className="about-body__portrait"><Image src="/portraits/idris-about.png" alt={ar ? "إدريس عارف" : "Idris Arif"} width={1254} height={1254} priority /></div><div className="about-body__content"><h2>{ar ? "التعلّم عندي يمر عبر البناء." : "For me, learning runs through building."}</h2>{ar ? <><p>أنا إدريس، مؤسس وباني منتجات تقنية. أعمل على البرمجيات بالطريقة التي أتعامل بها مع المشكلات: أفهم السياق، أختبر الفكرة، ثم أبني تجربة واضحة يمكن استخدامها وتحسينها.</p><p>اهتمامي يدور حول Software Engineering وSaaS والذكاء الاصطناعي عندما يكون جزءًا من منتج مفيد، لا مجرد طبقة استعراضية. لذلك تظهر المشاريع نفسها كأفضل دليل على ما أتعلمه وكيف أفكر.</p></> : <><p>I am Idris, a founder and builder of technology products. I approach software the same way I approach problems: understand the context, test the idea, then build a clear experience that can be used and improved.</p><p>My interests sit around software engineering, SaaS, and AI when it belongs inside a useful product—not as decoration. That is why the products themselves are the clearest record of what I am learning and how I think.</p></>}<div className="principles">{(ar ? [{ title: "المشكلة أولًا", text: "أبدأ من الاحتكاك الحقيقي، لا من قائمة تقنيات." }, { title: "وضوح قابل للبناء", text: "أحب الأنظمة التي يفهمها الناس ويمكن تطويرها خطوة بعد خطوة." }, { title: "المنتج هو الدليل", text: "أفضل طريقة لشرح القدرة هي وضع شيء حقيقي أمام الزائر." }] : [{ title: "Problem first", text: "I start with the real friction, not a list of technologies." }, { title: "Clarity that compounds", text: "I like systems people can understand and improve step by step." }, { title: "The product is the proof", text: "The clearest way to explain capability is to put something real in front of people." }]).map((item, index) => <article className="principle" key={item.title}><span>0{index + 1}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div></div></div></div>;
+  return <div className="about-page">
+    <header className="about-intro"><span className="section-index">01 / {ar ? "عن إدريس" : "About"}</span><div><h1>{ar ? "أبني لأفهم، وأتعلم بما أبنيه." : "I build to understand, and learn through what I build."}</h1><p>{ar ? "أعمل على منتجات تقنية من الفكرة إلى الواجهة والبنية والنشر، وأتعامل مع البرمجيات كوسيلة لحل احتكاك حقيقي، لا كعرض تقنيات." : "I work on technology products from idea to interface, architecture, and deployment. Software is a way to remove real friction—not a technology showcase."}</p></div></header>
+    <div className="about-story">
+      <div className="about-story__portrait"><Image src="/portraits/idris-about.png" alt={ar ? "إدريس عارف" : "Idris Arif"} width={1254} height={1254} priority /></div>
+      <div className="about-story__copy">
+        <span className="gold-rule" />
+        <h2>Founder mindset. Builder discipline.</h2>
+        {ar ? <><p>أنا إدريس عارف، مؤسس وباني منتجات. اهتمامي الأساسي هو المكان الذي تلتقي فيه هندسة البرمجيات مع المنتج والذكاء الاصطناعي: كيف تتحول مشكلة واضحة إلى تجربة يمكن استخدامها، ثم إلى نظام يمكن الوثوق به وتطويره.</p><p>مَدار وعَهد هما أفضل سجل لهذا الأسلوب. كلاهما بدأ من احتكاك عملي، ثم تطور عبر قرارات في المنتج والواجهة والمعمارية والنشر بدل الاكتفاء بنموذج استعراضي.</p></> : <><p>I am Idris Arif, a founder and product builder. My focus is the intersection of software engineering, product thinking, and AI: turning a clear problem into an experience people can use, then into a system that can be trusted and improved.</p><p>MADAR and AHD are the clearest record of that approach. Both started from operational friction and evolved through product, interface, architecture, and deployment decisions rather than stopping at a showcase prototype.</p></>}
+        <div className="principles">
+          {(ar ? [
+            ["01", "المشكلة أولًا", "أبدأ من الاحتكاك الحقيقي، لا من قائمة تقنيات."],
+            ["02", "الوضوح قبل الاستعراض", "التجربة الجيدة تجعل النظام مفهومًا قبل أن تجعله مبهرًا."],
+            ["03", "المنتج هو الدليل", "أفضل شرح للقدرة هو شيء حقيقي يعمل ويمكن تجربته."],
+          ] : [
+            ["01", "Problem first", "I start with real friction, not a list of technologies."],
+            ["02", "Clarity before spectacle", "A good experience makes a system understandable before it makes it impressive."],
+            ["03", "The product is the proof", "The clearest evidence of capability is something real that works."],
+          ]).map(([n,t,d]) => <article className="principle" key={n}><span>{n}</span><div><h3>{t}</h3><p>{d}</p></div></article>)}
+        </div>
+      </div>
+    </div>
+  </div>;
 }
